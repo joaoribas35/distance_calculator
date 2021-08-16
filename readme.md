@@ -49,9 +49,9 @@ POST http://127.0.0.1:5000/api/distances/
 
 ## Common API Errors:
 
-| Code | Type                   | Description                       |
-| ---- | ---------------------- | --------------------------------- |
-| 400  | `BAD_REQUEST`          | Invalid key provided.             |
-| 422  | `UNPROCESSABLE_ENTITY` | query must have at 3 character's. |
-| 422  | `UNPROCESSABLE_ENTITY` | The query must be a string.       |
-| 404  | `NOT_FOUND`            | Invalid or inexistent address.    |
+| Code | Type                   | Description                               |
+| ---- | ---------------------- | ----------------------------------------- |
+| 400  | `BAD_REQUEST`          | Invalid key provided.                     |
+| 422  | `UNPROCESSABLE_ENTITY` | Address must have at least 3 character's. |
+| 422  | `UNPROCESSABLE_ENTITY` | Address must be a string.                 |
+| 404  | `NOT_FOUND`            | Invalid or inexistent address.            |
