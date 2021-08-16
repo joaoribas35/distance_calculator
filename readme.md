@@ -47,7 +47,7 @@ HTTP code: 201 CREATED
 {
   "id": "1",
   "address": "Khimki, MS, Russia",
-  "distance": "19.57 km"
+  "distance": "1.57 km"
 }
 ```
 
