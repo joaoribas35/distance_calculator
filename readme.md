@@ -1,6 +1,6 @@
-# Calculate distance from two addresses
+# Calculate distance between two addresses
 
-This application uses Positionstack API to get coordinates and calculates the distance from one specific point of origin to the provided address creating a csv log file with the results. In this example, the application calculates the distance from Saint Basil's Cathedral and the address provided in the client. Saint Basil's Cathedral is used as an approximation to define whether the provided address is located inside the MKAD Moscow Ring Road (MKAD) or not. It's location is the center point of a 18 km radius circle. Will return a null string, indicating the address is inside MKAD, or a string with the distance expressed in kilometers if the address falls outside the MKAD.
+This application uses [positionstack](https://positionstack.com/) API to get coordinates and calculates the distance between two addresses creating a csv log file with the results. In this example, the application calculates the distance from Saint Basil's Cathedral and the address provided in the client. Saint Basil's Cathedral is used as an approximation to define whether the provided address is located inside the MKAD Moscow Ring Road (MKAD) or not. The Cathedral location is the center point of a 18 km radius circle. It will return a null string, indicating the address is inside MKAD, or a string with the distance expressed in kilometers if the address falls outside the MKAD.
 
 You will need to sign up for a free and straight forward API Key at [positionstack](https://positionstack.com/product).
 
@@ -38,6 +38,10 @@ POST http://127.0.0.1:5000/api/distances/
 ```
 
 ### Response Format
+
+```markdown
+HTTP code: 201 CREATED
+```
 
 ```json
 {
