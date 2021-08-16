@@ -68,7 +68,7 @@ def test_response_when_outside_MKAD():
 
     expected = {
         "address": "Khimki, MS, Russia",
-        "distance": "19.57 km",
+        "distance": "1.57 km",
     }
 
     response = client.post(
