@@ -8,10 +8,11 @@ env = Env()
 env.read_env()
 
 
-API_KEY = env("API_KEY")
+API_KEY = env("API_KEY")  # your API Key as set in env file.
 
 
 def get_coordinates(data: dict):
+    """ Will get the coordinates based on a provided address returning its latitude, longitude and full address as per Positionstack API. """
 
     if verify_input_keys(data):
         raise KeyError
@@ -20,6 +21,7 @@ def get_coordinates(data: dict):
     if not type(address) == str:
         raise TypeError
 
+    # format string as per Positionstack API requirement removing spaces.
     input = address.replace(' ', '%20')
 
     url = f'http://api.positionstack.com/v1/forward?access_key={API_KEY}&query={input}'

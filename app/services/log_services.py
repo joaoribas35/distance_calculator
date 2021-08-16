@@ -8,6 +8,8 @@ FIELDNAMES = ['id', 'address', 'distance']
 
 
 def read_logs():
+    """ Will verify if a file named log.csv exists. If not, will create a log.csv file and write a header with the fieldnames. """
+
     if not exists(FILENAME) or os.stat(FILENAME).st_size == 0:
         with open(FILENAME, 'w') as f:
             writer = DictWriter(f, fieldnames=FIELDNAMES)
@@ -24,6 +26,8 @@ def read_logs():
 
 
 def create_id():
+    """ Will create a numeric sequence to be used as IDs for the log.csv entries. """
+
     id_list = []
 
     logs = read_logs()
@@ -34,6 +38,8 @@ def create_id():
 
 
 def create_log(log):
+    """ Will create add a new log to log.csv. """
+
     with open(FILENAME, 'a') as f:
         writer = DictWriter(f, fieldnames=FIELDNAMES)
         writer.writerow(log)
