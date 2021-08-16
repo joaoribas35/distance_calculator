@@ -46,3 +46,11 @@ POST http://127.0.0.1:5000/api/distances/
   "distance": "19.57 km"
 }
 ```
+
+## Common API Errors:
+
+| Code | Type          | Description                   |
+| ---- | ------------- | ----------------------------- |
+| 400  | `BAD_REQUEST` | 'Isn't this fun?'             |
+| 400  | `BAD_REQUEST` | "Isn't this fun?"             |
+| 400  | `BAD_REQUEST` | -- is en-dash, --- is em-dash |
