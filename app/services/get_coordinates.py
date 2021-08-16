@@ -1,6 +1,7 @@
 import requests
 from environs import Env
 from app.exc import KeyError, ValidationError, TypeError, AddressError
+from app.services.helpers import verify_input_keys, verify_error
 
 
 env = Env()
@@ -8,20 +9,6 @@ env.read_env()
 
 
 API_KEY = env("API_KEY")
-
-
-def verify_input_keys(data: dict):
-    required_keys = ["address"]
-    keys = data.keys()
-
-    return [key for key in required_keys if key not in keys]
-
-
-def verify_error(data: dict):
-    verifying_keys = ["error"]
-    keys = data.keys()
-
-    return [key for key in verifying_keys if key in keys]
 
 
 def get_coordinates(data: dict):

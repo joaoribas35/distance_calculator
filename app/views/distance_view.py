@@ -11,6 +11,8 @@ bp = Blueprint("distances", __name__, url_prefix="/api")
 
 @bp.route("/distances/", methods=["POST"])
 def post():
+    """ This route will receive the the json provided in the request body, verify the coordinates of the provided address using Positionstack API, calculate the distance from one specific point of origin to the provided address and create a csv log file with the results. """
+
     data = request.get_json()
 
     try:
