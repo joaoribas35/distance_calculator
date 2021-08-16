@@ -33,10 +33,10 @@ def post():
         return e.args[0],  HTTPStatus.BAD_REQUEST
 
     except ValidationError as e:
-        return e.message,  HTTPStatus.BAD_REQUEST
+        return e.message,  HTTPStatus.UNPROCESSABLE_ENTITY
 
     except TypeError as e:
-        return e.message,  HTTPStatus.BAD_REQUEST
+        return e.message,  HTTPStatus.UNPROCESSABLE_ENTITY
 
     except AddressError as e:
-        return e.message,  HTTPStatus.BAD_REQUEST
+        return e.message,  HTTPStatus.NOT_FOUND

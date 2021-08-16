@@ -131,7 +131,7 @@ def test_status_short_address():
         headers={"Content-Type": "application/json"},
     )
 
-    assert response.status_code == 400
+    assert response.status_code == 422
 
 
 def test_response_short_address():
@@ -176,7 +176,7 @@ def test_status_invalid_address():
         headers={"Content-Type": "application/json"},
     )
 
-    assert response.status_code == 400
+    assert response.status_code == 404
 
 
 def test_response_invalid_address():
@@ -212,7 +212,7 @@ def test_status_invalid_address_type():
         headers={"Content-Type": "application/json"},
     )
 
-    assert response.status_code == 400
+    assert response.status_code == 422
 
 
 def test_response_invalid_address_type():
