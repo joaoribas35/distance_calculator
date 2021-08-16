@@ -1,5 +1,5 @@
-venv/
-.env/
-log.csv/
-__pycache__/
-app/__pychache__/
+venv
+.env
+log.csv
+__pycache__
+app/__pychache__
