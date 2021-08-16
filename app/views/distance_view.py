@@ -1,4 +1,3 @@
-import ipdb
 from flask import request, jsonify, Blueprint
 from app.services.get_coordinates import get_coordinates
 from app.services.calculate_distance import calculate_distance
